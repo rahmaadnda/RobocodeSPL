@@ -24,6 +24,9 @@ public class Line extends Movement {
 	
 	public void listen(Event e) {
 		if (e instanceof HitWallEvent) {
+			// move back a little after hitting the wall and before reversing
+			bot.setBack(100);
+			
 			moveDirection *= -1;
 		}
 	}
